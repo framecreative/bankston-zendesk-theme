@@ -30,16 +30,17 @@
 /***** Colours *****/
 
 :root {
-  --colour-background: #fff;
   --colour-foreground: #000;
+  --colour-background: #fff;
 }
 
-.southern-design-group {
-  --colour-background: #fff;
+body:has(.theme-bankston) {
   --colour-foreground: #000;
+  --colour-background: #fff;
 }
 
-.bankston {
+body:has(.theme-tradco) {
+  --colour-foreground: #000;
   --colour-background: #9FAEA5;
 }
 
@@ -229,8 +230,8 @@ template {
 }
 
 body {
-  background-color: white;
-  color: $text_color;
+  color: var(--colour-foreground);
+  background: var(--colour-background);
   font-family: inter-semi-bold;
   font-size: 13px;
   line-height: 1.5;
@@ -295,7 +296,7 @@ input:not([type=checkbox]) {
   outline: none;
 }
 input:not([type=checkbox]):focus {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 
 input[disabled] {
@@ -315,7 +316,7 @@ select {
   width: 100%;
 }
 select:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 select::-ms-expand {
   display: none;
@@ -330,7 +331,7 @@ textarea {
   padding: 10px;
 }
 textarea:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 
 .container {
@@ -385,9 +386,9 @@ ul {
 /***** Buttons *****/
 .button, .pagination-next-link, .pagination-prev-link, .pagination-first-link, .pagination-last-link, .subscriptions-subscribe button, .requests-table-toolbar .organization-subscribe button, .community-follow button, .article-subscribe button, .section-subscribe button, .split-button button {
   background-color: transparent;
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
   border-radius: 4px;
-  color: $brand_color;
+  color: var(--colour-foreground);
   cursor: pointer;
   display: inline-block;
   font-size: 12px;
@@ -407,16 +408,16 @@ ul {
   }
 }
 .button:visited, .pagination-next-link:visited, .pagination-prev-link:visited, .pagination-first-link:visited, .pagination-last-link:visited, .subscriptions-subscribe button:visited, .requests-table-toolbar .organization-subscribe button:visited, .community-follow button:visited, .article-subscribe button:visited, .section-subscribe button:visited, .split-button button:visited {
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 .button:hover, .pagination-next-link:hover, .pagination-prev-link:hover, .pagination-first-link:hover, .pagination-last-link:hover, .subscriptions-subscribe button:hover, .requests-table-toolbar .organization-subscribe button:hover, .community-follow button:hover, .article-subscribe button:hover, .section-subscribe button:hover, .split-button button:hover, .button:active, .pagination-next-link:active, .pagination-prev-link:active, .pagination-first-link:active, .pagination-last-link:active, .subscriptions-subscribe button:active, .requests-table-toolbar .organization-subscribe button:active, .community-follow button:active, .article-subscribe button:active, .section-subscribe button:active, .split-button button:active, .button:focus, .pagination-next-link:focus, .pagination-prev-link:focus, .pagination-first-link:focus, .pagination-last-link:focus, .subscriptions-subscribe button:focus, .requests-table-toolbar .organization-subscribe button:focus, .community-follow button:focus, .article-subscribe button:focus, .section-subscribe button:focus, .split-button button:focus, .button.button-primary, .button-primary.pagination-next-link, .button-primary.pagination-prev-link, .button-primary.pagination-first-link, .button-primary.pagination-last-link, .subscriptions-subscribe button.button-primary, .subscriptions-subscribe button[data-selected=true], .requests-table-toolbar .organization-subscribe button.button-primary, .requests-table-toolbar .organization-subscribe button[data-selected=true], .community-follow button.button-primary, .article-subscribe button.button-primary, .article-subscribe button[data-selected=true], .section-subscribe button.button-primary, .section-subscribe button[data-selected=true], .split-button button.button-primary {
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
   color: $brand_text_color;
   text-decoration: none;
 }
 .button.button-primary:hover, .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .subscriptions-subscribe button.button-primary:hover, .subscriptions-subscribe button[data-selected=true]:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .requests-table-toolbar .organization-subscribe button[data-selected=true]:hover, .community-follow button.button-primary:hover, .article-subscribe button.button-primary:hover, .article-subscribe button[data-selected=true]:hover, .section-subscribe button.button-primary:hover, .section-subscribe button[data-selected=true]:hover, .split-button button:hover, .button.button-primary:focus, .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .subscriptions-subscribe button.button-primary:focus, .subscriptions-subscribe button[data-selected=true]:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .requests-table-toolbar .organization-subscribe button[data-selected=true]:focus, .community-follow button.button-primary:focus, .article-subscribe button.button-primary:focus, .article-subscribe button[data-selected=true]:focus, .section-subscribe button.button-primary:focus, .section-subscribe button[data-selected=true]:focus, .split-button button.button-primary:focus, .button.button-primary:active, .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active, .subscriptions-subscribe button.button-primary:active, .subscriptions-subscribe button[data-selected=true]:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .requests-table-toolbar .organization-subscribe button[data-selected=true]:active, .community-follow button.button-primary:active, .article-subscribe button.button-primary:active, .article-subscribe button[data-selected=true]:active, .section-subscribe button.button-primary:active, .section-subscribe button[data-selected=true]:active, .split-button button.button-primary:active {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: var(--colour-foreground);
+  border-color: var(--colour-foreground);
 }
 .button[data-disabled], [data-disabled].pagination-next-link, [data-disabled].pagination-prev-link, [data-disabled].pagination-first-link, [data-disabled].pagination-last-link, .subscriptions-subscribe button[data-disabled], .requests-table-toolbar .organization-subscribe button[data-disabled], .community-follow button[data-disabled], .article-subscribe button[data-disabled], .section-subscribe button[data-disabled], .split-button button[data-disabled] {
   cursor: default;
@@ -424,7 +425,7 @@ ul {
 
 .button-large, input[type=submit] {
   cursor: pointer;
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
   border: 0;
   border-radius: 4px;
   color: $brand_text_color;
@@ -443,7 +444,7 @@ ul {
   color: $brand_text_color;
 }
 .button-large:hover, .button-large:active, .button-large:focus, input[type=submit]:hover, input[type=submit]:active, input[type=submit]:focus {
-  background-color: darken($brand_color, 20%);
+  background-color: var(--colour-foreground);
 }
 .button-large[disabled], input[type=submit][disabled] {
   background-color: #ddd;
@@ -469,12 +470,12 @@ ul {
 }
 
 .split-button button {
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
   border: 0;
   color: $brand_text_color;
   height: 32px;
   line-height: 16px;
-  outline-color: $brand_color;
+  outline-color: var(--colour-foreground);
 }
 
 [dir=rtl] .split-button button:not(:only-child):first-child {
@@ -579,7 +580,7 @@ ul {
   width: 100%;
 }
 .form-field input:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 
 .form-field input[type=text] {
@@ -587,7 +588,7 @@ ul {
   border-radius: 4px;
 }
 .form-field input[type=text]:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 
 .form-field input[type=checkbox] {
@@ -603,7 +604,7 @@ ul {
   vertical-align: middle;
 }
 .form-field .nesty-input:focus {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
   text-decoration: none;
 }
 
@@ -613,7 +614,7 @@ ul {
 
 .form-field .hc-multiselect-toggle:focus {
   outline: none;
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
   text-decoration: none;
 }
 
@@ -668,7 +669,7 @@ ul {
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  border: solid 1px $brand_color;
+  border: solid 1px var(--colour-foreground);
 }
 .header-inner {
   max-width: 1200px;
@@ -689,7 +690,7 @@ ul {
 
 .logo span {
   margin: 0 10px;
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 
 .logo a {
@@ -756,7 +757,7 @@ ul {
 }
 .nav-wrapper-desktop a {
   border: 0;
-  color: $brand_color;
+  color: var(--colour-foreground);
   display: none;
   font-size: 14px;
   padding: 0 20px 0 0;
@@ -774,7 +775,7 @@ ul {
 }
 .nav-wrapper-desktop a:hover, .nav-wrapper-desktop a:focus, .nav-wrapper-desktop a:active {
   background-color: transparent;
-  color: $brand_color;
+  color: var(--colour-foreground);
   text-decoration: underline;
 }
 
@@ -931,18 +932,18 @@ ul {
   align-items: center;
   gap: 10px;
   border: 0;
-  color: $brand_color;
+  color: var(--colour-foreground);
   font-weight: bold;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
 }
 .user-info > button:hover, .user-info > button:focus {
-  color: $brand_color;
+  color: var(--colour-foreground);
   background-color: transparent;
 }
 .user-info > button::after {
-  color: $brand_color;
+  color: var(--colour-foreground);
   padding-right: 15px;
 }
 [dir=rtl] .user-info > button::after {
@@ -981,7 +982,7 @@ ul {
   width: 40px;
 }
 .avatar .icon-agent {
-  color: $brand_color;
+  color: var(--colour-foreground);
   border: 2px solid #fff;
   border-radius: 50%;
   bottom: -4px;
@@ -1004,7 +1005,7 @@ ul {
   font-size: 16px;
 }
 .footer a {
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 .footer-inner {
   max-width: 1160px;
@@ -1061,7 +1062,7 @@ ul {
 }
 
 .search {
-  border-color: $brand_color;
+  border-color: var(--colour-foreground);
   border-radius: 30px;
   border-style: solid;
   border-width: 1px;
@@ -1070,28 +1071,21 @@ ul {
   transition: border 0.12s ease-in-out;
 }
 .search:focus-within {
-  border-color: $brand_color;
+  border-color: var(--colour-foreground);
 }
 .search input[type=search],
 .search .clear-button {
-  background-color: #fff;
   border-radius: 30px;
   border: none;
-}
-.search-full input[type=search], .search-full .clear-button {
-  border-color: #fff;
 }
 .search input[type=search] {
   appearance: none;
   -webkit-appearance: none;
   box-sizing: border-box;
-  color: $brand_color;
+  color: var(--colour-foreground);
   flex: 1 1 auto;
   height: 40px;
   width: 100%;
-}
-.search input[type=search]:focus {
-  color: #555;
 }
 .search input[type=search]::-webkit-search-decoration, .search input[type=search]::-webkit-search-cancel-button, .search input[type=search]::-webkit-search-results-button, .search input[type=search]::-webkit-search-results-decoration {
   -webkit-appearance: none;
@@ -1102,7 +1096,6 @@ ul {
 .search .clear-button {
   align-items: center;
   box-sizing: border-box;
-  color: #777;
   cursor: pointer;
   display: none;
   flex: none;
@@ -1110,12 +1103,11 @@ ul {
   padding: 0 15px;
 }
 .search .clear-button:hover {
-  background-color: $brand_color;
-  color: #fff;
+  background-color: var(--colour-foreground);
 }
 .search .clear-button:focus {
   outline: 0;
-  box-shadow: 0 0 0 3px $brand_color;
+  box-shadow: 0 0 0 3px var(--colour-foreground);
 }
 .search-has-value .clear-button {
   display: flex;
@@ -1124,6 +1116,10 @@ ul {
 [dir=ltr] .search input[type=search] {
   padding-left: 40px;
   padding-right: 20px;
+  background: transparent;
+}
+[dir=ltr] .search input[type=search]::placeholder {
+  color: var(--colour-foreground);
 }
 [dir=ltr] .search-has-value input[type=search] {
   border-bottom-right-radius: 0;
@@ -1131,15 +1127,17 @@ ul {
   border-right-color: transparent;
 }
 [dir=ltr] .search-has-value input[type=search]:focus {
-  border-right-color: $brand_color;
+  border-right-color: var(--colour-foreground);
 }
 [dir=ltr] .search .clear-button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   border-left-color: transparent;
+  background: transparent;
+  color: var(--colour-foreground);
 }
 [dir=ltr] .search .clear-button:focus {
-  border-left-color: $brand_color;
+  border-left-color: var(--colour-foreground);
 }
 
 [dir=rtl] .search input[type=search] {
@@ -1152,7 +1150,7 @@ ul {
   border-left-color: transparent;
 }
 [dir=rtl] .search-has-value input[type=search]:focus {
-  border-left-color: $brand_color;
+  border-left-color: var(--colour-foreground);
 }
 [dir=rtl] .search .clear-button {
   border-bottom-right-radius: 0;
@@ -1160,7 +1158,7 @@ ul {
   border-right-color: transparent;
 }
 [dir=rtl] .search .clear-button:focus {
-  border-right-color: $brand_color;
+  border-right-color: var(--colour-foreground);
 }
 
 .search-icon {
@@ -1171,7 +1169,7 @@ ul {
   z-index: 1;
   width: 18px;
   height: 18px;
-  color: #777;
+  color: var(--colour-foreground);
   pointer-events: none;
 }
 [dir=rtl] .search-icon {
@@ -1283,13 +1281,12 @@ ul {
 .blocks-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 150px;
 }
 .blocks-item {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
   border-radius: 10px;
   box-sizing: border-box;
-  color: $brand_color;
+  color: var(--colour-foreground);
   display: flex;
   flex: 1 0 340px;
   margin: 0 0 25px;
@@ -1302,7 +1299,7 @@ ul {
   }
 }
 .blocks-item:hover, .blocks-item:focus, .blocks-item:active {
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
 }
 .blocks-item:hover *, .blocks-item:focus *, .blocks-item:active * {
   color: $brand_text_color;
@@ -1322,7 +1319,7 @@ ul {
   color: $text_color;
 }
 .blocks-item-link {
-  color: $brand_color;
+  color: var(--colour-foreground);
   padding: 25px 30px;
   display: flex;
   flex-direction: column;
@@ -1336,7 +1333,7 @@ ul {
 }
 .blocks-item-link:focus {
   outline: 0;
-  box-shadow: 0 0 0 3px $brand_color;
+  box-shadow: 0 0 0 3px var(--colour-foreground);
   text-decoration: none;
 }
 .blocks-item-title {
@@ -1395,7 +1392,7 @@ ul {
 .promoted-articles-item a {
   display: block;
   font-size: 36px;
-  color: $brand_color;
+  color: var(--colour-foreground);
   font-family: rhymes-bold;
   line-height: 1.3;
 }
@@ -1526,7 +1523,7 @@ ul {
 }
 .recent-activity-comment-icon svg {
   vertical-align: middle;
-  color: $brand_color;
+  color: var(--colour-foreground);
   width: 16px;
   height: 16px;
 }
@@ -1598,7 +1595,7 @@ ul {
 }
 
 .icon-star {
-  color: $brand_color;
+  color: var(--colour-foreground);
   font-size: 18px;
 }
 
@@ -1853,7 +1850,7 @@ ul {
 }
 .article-comment-count-icon {
   vertical-align: middle;
-  color: $brand_color;
+  color: var(--colour-foreground);
   width: 18px;
   height: 18px;
 }
@@ -2021,7 +2018,7 @@ ul {
 }
 .share a:hover {
   text-decoration: none;
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 .share a svg {
   height: 18px;
@@ -2082,7 +2079,7 @@ ul {
   position: relative;
 }
 .comment-wrapper.comment-official {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
   padding: 40px 20px 20px;
 }
 @media (min-width: 768px) {
@@ -2182,7 +2179,7 @@ ul {
   margin-top: 10px;
 }
 .comment-attachments a {
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 .comment-body {
   -moz-hyphens: auto;
@@ -2331,7 +2328,7 @@ ul {
 
 .vote-up:hover,
 .vote-down:hover {
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 
 .vote-up, .vote-down {
@@ -2350,11 +2347,11 @@ ul {
 }
 
 .vote-voted {
-  color: $brand_color;
+  color: var(--colour-foreground);
 }
 
 .vote-voted:hover {
-  color: darken($brand_color, 20%);
+  color: var(--colour-foreground);
 }
 
 /***** Actions *****/
@@ -2477,14 +2474,14 @@ ul {
   }
 }
 .community-follow button:hover {
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
 }
 .community-follow button:hover::after, .community-follow button:focus::after {
   border-color: $brand_text_color;
   color: $brand_text_color;
 }
 .community-follow button[data-selected=true] {
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
   color: $brand_text_color;
 }
 .community-follow button[data-selected=true]::after {
@@ -2492,13 +2489,13 @@ ul {
   color: $brand_text_color;
 }
 .community-follow button[data-selected=true]:hover {
-  background-color: darken($brand_color, 20%);
-  border-color: darken($brand_color, 20%);
+  background-color: var(--colour-foreground);
+  border-color: var(--colour-foreground);
 }
 .community-follow button::after {
-  border-left: 1px solid $brand_color;
+  border-left: 1px solid var(--colour-foreground);
   content: attr(data-follower-count);
-  color: $brand_color;
+  color: var(--colour-foreground);
   display: inline-block;
   font-family: $heading_font;
   margin-left: 15px;
@@ -2513,7 +2510,7 @@ ul {
 }
 [dir=rtl] .community-follow button::after {
   border-left: 0;
-  border-right: 1px solid $brand_color;
+  border-right: 1px solid var(--colour-foreground);
   margin: 0 10px 0 0;
   padding: 0 10px 0 0;
 }
@@ -2608,7 +2605,7 @@ ul {
   text-decoration: none;
 }
 .status-label-pinned, .status-label-featured, .status-label-official {
-  background-color: $brand_color;
+  background-color: var(--colour-foreground);
 }
 .status-label-official {
   border-radius: 0;
@@ -2880,7 +2877,7 @@ ul {
   text-decoration: none;
 }
 .post-comment-count .icon-comments {
-  color: $brand_color;
+  color: var(--colour-foreground);
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -3031,7 +3028,7 @@ ul {
 }
 .collapsible-nav-toggle:focus {
   outline: none;
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 
 .collapsible-nav-list {
@@ -3098,7 +3095,7 @@ ul {
 @media (min-width: 768px) {
   .collapsible-nav-list li[aria-selected=true],
   .collapsible-nav-list li.current {
-    border-bottom: 4px solid $brand_color;
+    border-bottom: 4px solid var(--colour-foreground);
     order: 1;
   }
 }
@@ -3161,7 +3158,7 @@ ul {
 }
 .collapsible-sidebar-toggle:focus {
   outline: none;
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 .collapsible-sidebar-body {
   display: none;
@@ -3463,7 +3460,7 @@ ul {
   border-bottom: 0;
 }
 .request-main .form-field.comment-ccs > ul[data-hc-focus=true] {
-  border: 1px solid $brand_color;
+  border: 1px solid var(--colour-foreground);
 }
 .request-main .form-field.comment-ccs > input[type=text] {
   border-bottom-left-radius: 0;
@@ -3476,7 +3473,7 @@ ul {
   margin-top: 0;
 }
 .request-main .comment-ccs + textarea:focus {
-  border-top: 1px solid $brand_color;
+  border-top: 1px solid var(--colour-foreground);
 }
 .request-main input#mark_as_solved {
   display: none;
@@ -3862,9 +3859,9 @@ ul {
 
 .profile-private-badge {
   flex-basis: 100%;
-  border: solid 1px $brand_color;
+  border: solid 1px var(--colour-foreground);
   border-radius: 4px;
-  color: $brand_color;
+  color: var(--colour-foreground);
   padding: 5px 20px;
   font-size: 12px;
   text-align: center;
@@ -4395,7 +4392,7 @@ ul {
   font-size: 13px;
 }
 .search-result-votes-icon, .search-result-meta-count-icon {
-  color: $brand_color;
+  color: var(--colour-foreground);
   vertical-align: middle;
   width: 13px;
   height: 13px;
@@ -4759,11 +4756,15 @@ html[dir=rtl] .notification-left-aligned {
 
 /***** Extra Custom *****/
 
+.articles {
+  margin-top: 150px;
+}
+
 .articles-header {
   display: flex;
   justify-content: center;
-  border-top: solid 1px $brand_color;
-  border-bottom: solid 1px $brand_color;
+  border-top: solid 1px var(--colour-foreground);
+  border-bottom: solid 1px var(--colour-foreground);
   padding: 13px;
 }
 
