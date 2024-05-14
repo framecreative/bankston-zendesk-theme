@@ -221,7 +221,7 @@ template {
 body {
   color: var(--colour-foreground);
   background: var(--colour-background);
-  font-family: 'rhymes-text-semi-bold';
+  font-family: $assets-rhymes-text-light-woff;
   font-size: 13px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -238,7 +238,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'rhymes-text-semi-bold';
+  font-family: $assets-rhymes-text-light-woff;
   margin-top: 0;
 }
 
