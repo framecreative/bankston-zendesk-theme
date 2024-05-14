@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'rhymes-text-semi-bold';
-  src: url('//southerndesigngrouphelp.zendesk.com/hc/rhymes-text-semi-bold.woff') format('woff');    
+  src: url('$assets-rhymes-text-semi-bold-woff') format('woff');    
   font-weight: 400;
   font-style: normal; 
 }
