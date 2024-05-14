@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'rhymes-text-light';
-  src: url('$assets-rhymes-text-light-woff') format('woff');    
+  src: url('//theme.zdassets.com/theme_assets/rhymes-text-light.woff') format('woff');    
   font-weight: 400;
   font-style: normal; 
 }
 
 @font-face {
   font-family: 'rhymes-text-semi-bold';
-  src: url('$assets-rhymes-text-semi-bold-woff') format('woff');    
+  src: url('//theme.zdassets.com/theme_assets/rhymes-text-semi-bold.woff') format('woff');    
   font-weight: 400;
   font-style: normal; 
 }
